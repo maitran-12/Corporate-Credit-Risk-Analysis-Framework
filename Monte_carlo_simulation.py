@@ -125,8 +125,8 @@ if __name__ == "__main__":
             model.fetch_data()
             model.solve_merton()
             
-            # Show simulation only if PD > 0.01%, otherwise it's too many pop-ups
-            if model.PD > 0.0001: 
+            # Show simulation only if PD > 1%, otherwise it's too many pop-ups
+            if model.PD > 0.01: 
                 print(f"High Risk Detected for {ticker}. Running Monte Carlo Stress Test...")
                 model.run_monte_carlo()
             else:
