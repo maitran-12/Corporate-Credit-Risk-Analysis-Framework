@@ -57,11 +57,11 @@ The processed output (`Portfolio_Risk_Report.csv`) is visualized through an inte
 * **Credit Rating System:** Categorizes firms from **AAA (Prime)** to **C (High Risk)** based on calculated Distance to Default metrics.
 * **Regional Analysis:** Interactive slicers allow for risk segmentation across global markets (Singapore, UK, USA).
 
-[Dashboard Preview](https://github.com/maitran-12/Corporate-Credit-Risk-Analytics-Framework/raw/ddc4c5c067da020552cd460dc021d1540081dde3/Power%20BI%20dashboard.gif)
+[Dashboard Preview](https://github.com/maitran-12/Corporate-Credit-Risk-Analysis-Framework/raw/75f9fb891d0f3bbcba55387078044a493756dcbd/Power%20BI%20dashboard.gif)
 
-[Monte Carlo for the stock detected with high risk](https://github.com/maitran-12/Corporate-Credit-Risk-Analytics-Framework/raw/5394c9df1230b0b6dd21571aa42323c2a0d047db/Monte%20carlo%20for%20AAL.png)
+[Monte Carlo for the stock detected with high risk](https://github.com/maitran-12/Corporate-Credit-Risk-Analysis-Framework/raw/75f9fb891d0f3bbcba55387078044a493756dcbd/Monte%20carlo%20for%20AAL.png)
 
-[Result from Python execution](https://github.com/maitran-12/Corporate-Credit-Risk-Analytics-Framework/raw/5394c9df1230b0b6dd21571aa42323c2a0d047db/Python%20execution.png)
+[Result from Python execution](https://github.com/maitran-12/Corporate-Credit-Risk-Analysis-Framework/raw/75f9fb891d0f3bbcba55387078044a493756dcbd/Python%20execution.png)
 
 ---
 
