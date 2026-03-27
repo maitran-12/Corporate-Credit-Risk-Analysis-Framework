@@ -19,7 +19,7 @@ The engine dynamically synchronizes with market reality via the `yfinance` API:
 * **Debt Extraction:** Scans Balance Sheets to define the Default Barrier ($D$), where:
     $$D = \text{Short-term Debt} + 0.5 \times \text{Long-term Debt}$$
   
-* (Note: If a granular breakdown is unavailable, the engine uses $$0.5 \times (\text{Total Assets} - \text{Equity})$$ as a conservative proxy).*
+* Note: If a granular breakdown is unavailable, the engine uses $$0.5 \times (\text{Total Assets} - \text{Equity})$$ as a conservative proxy.
 ### 2. Numerical Optimization Solver (`solve_merton`)
 Since Asset Value ($V$) and Asset Volatility ($\sigma_V$) are unobservable, the engine applies a sophisticated numerical approach:
 * **Simultaneous Equations:** Defines the Black-Scholes-Merton non-linear system where Equity is treated as a Call Option on company assets.
@@ -34,7 +34,7 @@ Since Asset Value ($V$) and Asset Volatility ($\sigma_V$) are unobservable, the 
 
 ### 3. Dynamic Stress Testing (`run_monte_carlo`)
 To assess resilience under extreme volatility:
-* **Trigger-based Execution:** To optimize performance, the engine intelligently triggers a simulation only for high risk tickers (where PD > 0.01 \%).
+* **Trigger-based Execution:** To optimize performance, the engine intelligently triggers a simulation only for high risk tickers (where PD > 1 \%).
 * **Stochastic Simulation:** Generates 10,000 random scenarios for future asset values using **Geometric Brownian Motion (GBM)**.
 * $$V_T = V_0 \exp\left( \left(\mu - \frac{\sigma_V^2}{2}\right)T + \sigma_V W_T \right)$$
 
