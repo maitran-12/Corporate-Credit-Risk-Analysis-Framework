@@ -69,7 +69,7 @@ class MertonCreditModel:
             r_data = yf.Ticker("^IRX").history(period="1d")
             self.r = r_data['Close'].iloc[-1] / 100
         except:
-            self.r = 0.04 # Default 4% if API fails
+            self.r = 0.04 # Default 4% if API fails. This is based on historical average of SOFR during 2025 - 2026, ensuring model still have benchmark if API cannot fetch data.
 
         print(f"Equity: {self.E:,.0f} | Debt: {self.D:,.0f} | Vol: {self.sigma_E:.2%}")
 
