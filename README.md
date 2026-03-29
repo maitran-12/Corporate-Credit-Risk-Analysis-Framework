@@ -15,7 +15,7 @@ The backbone of this project is the `Merton Credit Model`, which executes a 3-st
 The engine dynamically synchronizes with market reality via the `yfinance` API:
 * **Market Inputs:** Retrieves real-time Market Capitalization and calculates annualized Equity Volatility ($\sigma_E$) from the most recent 252 trading days.
 * **Financial Parsing:** Automatically scans Quarterly and Annual Balance Sheets to extract Short-term and Long-term debt for the strike price ($D$).
-* **Macro Environment:** Pulls the latest Risk-Free Rate ($r$) from the 13-week Treasury Bill (`^IRX`). `^IRX` is used as the proxy for 1-year Risk-Free Rate because it has highest liquidity and reliability on Yahoo Finance. `^GS1B ticker (1-year T-Bill) often has N/A error.
+* **Macro Environment:** Pulls the latest Risk-Free Rate ($r$) from the 13-week Treasury Bill (`^IRX`). `^IRX` is used as the proxy for 1-year Risk-Free Rate because it has highest liquidity and reliability on Yahoo Finance. `^GS1B` ticker (1-year T-Bill) often has N/A error.
 * **Debt Extraction:** Scans Balance Sheets to define the Default Barrier ($D$). This is based on Moody KMV framework. The formula is:
     $$D = \text{Short-term Debt} + 0.5 \times \text{Long-term Debt}$$
   
