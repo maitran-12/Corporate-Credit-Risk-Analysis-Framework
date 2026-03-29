@@ -18,7 +18,7 @@ class MertonCreditModel:
         self.T = 1.0  # 1-year horizon
 
     def fetch_data(self):
-        """Step 1: Fetch Real-time Market & Financial Data (Enhanced for Global Markets)"""
+        """1. Fetch Real-time Market & Financial Data (Enhanced for Global Markets)"""
         print(f"\n--- [1/3] Fetching Data for {self.ticker} ---")
         t = yf.Ticker(self.ticker)
         
@@ -74,7 +74,7 @@ class MertonCreditModel:
         print(f"Equity: {self.E:,.0f} | Debt: {self.D:,.0f} | Vol: {self.sigma_E:.2%}")
 
     def solve_merton(self): 
-        """Step 2: Solve Merton Simultaneous Equations"""
+        """2. Solve Merton Simultaneous Equations"""
         def equations(vars):
             V, sigma_V = vars
             d1 = (np.log(V/self.D) + (self.r + 0.5 * sigma_V**2) * self.T) / (sigma_V * np.sqrt(self.T))
@@ -93,7 +93,7 @@ class MertonCreditModel:
         print(f"Asset Value (V): {self.V:,.0f} | DD: {self.DD:.2f} | PD: {self.PD:.4%}")
 
     def run_monte_carlo(self, iterations=10000):
-        """Step 3: Monte Carlo Simulation"""
+        """3. Monte Carlo Simulation"""
         Z = np.random.standard_normal(iterations)
         V_T = self.V * np.exp((self.r - 0.5 * self.sigma_V**2) * self.T + self.sigma_V * np.sqrt(self.T) * Z)
         
